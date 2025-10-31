@@ -13,7 +13,7 @@ const LogoScroll = () => {
           src={logo.imagePath}
           key={logo.brand}
           id={logo.brand}
-          classname="h-[34px] object-contain"
+          className="h-[34px] object-contain"
         />
       ))}
     </div>

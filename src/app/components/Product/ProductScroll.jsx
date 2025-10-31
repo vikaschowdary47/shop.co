@@ -37,8 +37,8 @@ const ProductScroll = () => {
       <div className="layout-container">
         <h2>New Arrivals</h2>
         <div className="grid grid-cols-4 flex justify-between gap-4">
-          {products.map((product) => (
-            <ProductCard {...product} key={slugify(product.name)} />
+          {products.map((product, i) => (
+            <ProductCard {...product} key={slugify(product.name) + i} />
           ))}
         </div>
       </div>

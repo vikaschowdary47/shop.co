@@ -11,7 +11,7 @@ const ProductCard = ({
     <div>
       <img src={imagePath} alt={name} />
       <h3>{name}</h3>
-      <CustomRating />
+      <CustomRating rating={rating} />
       {rating}
       {originalPrice}
       {discountedPrice}

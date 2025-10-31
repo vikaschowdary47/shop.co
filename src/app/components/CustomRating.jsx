@@ -2,31 +2,31 @@
 
 // import Rating from "react-rating";
 import dynamic from "next/dynamic";
-import { IoIosStarOutline } from "react-icons/io";
+import { IoIosStar, IoIosStarOutline } from "react-icons/io";
 
 const Rating = dynamic(() => import("react-rating"), {
   ssr: false,
 });
 
-const SVGIcon = (props) => (
-  <svg className={props.className} pointerEvents="none">
-    <use xlinkHref={props.href} />
-  </svg>
-);
-
-const CustomRating = () => {
+const CustomRating = ({ rating }) => {
   return (
     <div>
       <Rating
+        // emptySymbol={null}
         emptySymbol={
-          <IoIosStarOutline href="#icon-star-empty" className="icon" />
+          <IoIosStarOutline
+            href="#icon-star-empty"
+            className="empty-icon"
+            color="gold"
+          />
         }
         fullSymbol={
-          <IoIosStarOutline href="#icon-star-full" className="icon" />
+          <IoIosStar href="#icon-star-full" className="icon" color="FFC633" />
         }
-        initialRating={2.4}
+        initialRating={rating}
         readonly
       />
+      <p>{rating}/5</p>
     </div>
   );
 };

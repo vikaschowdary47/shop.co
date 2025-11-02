@@ -7,7 +7,7 @@ const LogoScroll = () => {
     { brand: "ck", imagePath: "/images/ck.png" },
   ];
   return (
-    <div className="bg-black flex items-center  w-dvw min-h-[122px]  layout-container gap-4 flex-wrap justify-evenly md:justify-between">
+    <div className="bg-black flex items-center  w-dvw min-h-[122px]  layout-container gap-4 flex-wrap justify-evenly md:justify-around lg:justify-between">
       {logos.map((logo) => (
         <img
           src={logo.imagePath}

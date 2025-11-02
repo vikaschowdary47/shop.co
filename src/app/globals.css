@@ -5,10 +5,14 @@ body {
 }
 
 @theme {
+  --text-grey-1: #f2f0f1;
 }
 
 @layer utilities {
   .layout-container {
-    @apply py-3 px-3;
+    @apply py-3 px-25;
+  }
+  .flex-center {
+    @apply items-center flex justify-center;
   }
 }

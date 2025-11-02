@@ -7,7 +7,7 @@ export default function Home() {
     <div className="container">
       <HeroSection />
       <LogoScroll />
-      <ProductScroll />
+      <ProductScroll heading="New Arrivals" linkToNextPage="/page" />
     </div>
   );
 }

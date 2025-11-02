@@ -1,7 +1,10 @@
+"use client";
+
 import slugify from "slugify";
 import ProductCard from "./ProductCard";
+import { useRouter } from "next/navigation";
 
-const ProductScroll = () => {
+const ProductScroll = ({ heading, linkToNextPage }) => {
   const products = [
     {
       name: "T-shirt with Tape Details",
@@ -32,15 +35,31 @@ const ProductScroll = () => {
       imagePath: "/images/products/jeans1.png",
     },
   ];
+
+  const router = useRouter();
   return (
     <div className="w-dvw">
       <div className="layout-container">
-        <h2>New Arrivals</h2>
+        {heading && (
+          <h2 className="text-center font-bold uppercase text-4xl mt-6 mb-8">
+            {heading}
+          </h2>
+        )}
         <div className="grid grid-cols-4 flex justify-between gap-4">
           {products.map((product, i) => (
             <ProductCard {...product} key={slugify(product.name) + i} />
           ))}
         </div>
+        {linkToNextPage && (
+          <div className="flex-center my-10">
+            <button
+              onClick={() => router.push(linkToNextPage)}
+              className="w-[250px] h-[52px] rounded-full border-1"
+            >
+              View All
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

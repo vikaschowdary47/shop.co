@@ -10,9 +10,8 @@ const Rating = dynamic(() => import("react-rating"), {
 
 const CustomRating = ({ rating }) => {
   return (
-    <div>
+    <div className="flex items-center">
       <Rating
-        // emptySymbol={null}
         emptySymbol={
           <IoIosStarOutline
             href="#icon-star-empty"
@@ -26,7 +25,7 @@ const CustomRating = ({ rating }) => {
         initialRating={rating}
         readonly
       />
-      <p>{rating}/5</p>
+      <p className="ml-1 mt-[-4px]">{rating}/5</p>
     </div>
   );
 };

@@ -1,8 +1,8 @@
 export default function HeroSection() {
   return (
-    <section className="grid sm:grid-cols-3 grid-cols-1">
+    <section className="w-dvw grid sm:grid-cols-3 grid-cols-1 bg-[#F2F0F1]">
       <div className="col-span-2 layout-container">
-        <h1 className="text-4xl font-bold uppercase">
+        <h1 className="text-[64px] leading-[64px] font-bold uppercase">
           FIND CLOTHES <br /> That MATCHES
           <br />
           YOUR STYLE

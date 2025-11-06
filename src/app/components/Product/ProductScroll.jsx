@@ -45,7 +45,10 @@ const ProductScroll = ({ heading, linkToNextPage }) => {
             {heading}
           </h2>
         )}
-        <div className="grid grid-cols-4 flex justify-between gap-4">
+        <div
+          className="flex space-x-4 overflow-x-auto py-4
+ lg:grid grid-cols-4  justify-between gap-4"
+        >
           {products.map((product, i) => (
             <ProductCard {...product} key={slugify(product.name) + i} />
           ))}

@@ -12,7 +12,7 @@ export default function Home() {
       <LogoScroll />
       <ProductScroll heading="New Arrivals" linkToNextPage="/page" />
       <div className="layout-container">
-        <div className="h-[0.2px] bg-black w-full" />
+        <div className="divide" />
       </div>
       <ProductScroll heading="Top Selling" linkToNextPage="/page" />
       <BrowseCard />

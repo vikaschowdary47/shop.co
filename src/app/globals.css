@@ -10,30 +10,22 @@ body {
 
 @layer utilities {
   .layout-container {
-    @apply py-3 px-25 w-dvw;
+    @apply py-3 px-5 md:px-15 lg:px-25 w-dvw;
   }
   .flex-center {
     @apply items-center flex justify-center;
   }
+  .divide {
+    @apply h-[0.2px] bg-black w-full opacity-50;
+  }
 
   .browse_card {
-    margin-bottom: 20px;
-    position: relative;
-    border-radius: 20px;
-    height: 289px;
-    width: 100%;
-    background-color: white;
-    h3 {
-      position: absolute;
-      top: 30px;
-      left: 30px;
-      font-size: 36px;
-      font-weight: 800;
-    }
-    img {
-      height: 100%;
-      margin-left: auto;
-      border-radius: 20px;
-    }
+    @apply mb-[20px] relative rounded-[20px] h-[289px] w-full bg-white;
+  }
+  .browse_card h3 {
+    @apply absolute top-[30px] left-[30px] text-[36px] font-extrabold;
+  }
+  .browse_card img {
+    @apply h-full ml-auto rounded-[20px];
   }
 }

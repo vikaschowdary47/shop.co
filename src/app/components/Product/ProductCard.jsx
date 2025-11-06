@@ -8,7 +8,7 @@ const ProductCard = ({
   discountedPrice,
 }) => {
   return (
-    <div>
+    <div className="min-w-[200px]">
       <img src={imagePath} alt={name} />
       <h3 className="font-bold mt-3 ml-1">{name}</h3>
       <CustomRating rating={rating} />

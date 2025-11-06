@@ -10,9 +10,30 @@ body {
 
 @layer utilities {
   .layout-container {
-    @apply py-3 px-25;
+    @apply py-3 px-25 w-dvw;
   }
   .flex-center {
     @apply items-center flex justify-center;
+  }
+
+  .browse_card {
+    margin-bottom: 20px;
+    position: relative;
+    border-radius: 20px;
+    height: 289px;
+    width: 100%;
+    background-color: white;
+    h3 {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      font-size: 36px;
+      font-weight: 800;
+    }
+    img {
+      height: 100%;
+      margin-left: auto;
+      border-radius: 20px;
+    }
   }
 }
